@@ -1,0 +1,10 @@
+.Projects {
+	display: flex;
+	flex-direction: column;
+}
+
+.Projects > div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
