@@ -70,8 +70,24 @@
 	color: black !important;
 }
 
+.git a:hover,
+.git a:active {
+    background: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
 .link {
 	--social-main-color: rgb(0, 119, 181);
+}
+
+.link a:hover,
+.link a:active {
+    background: rgb(0, 119, 181);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 /* Rule if browser windoe is 386px wide or less */
