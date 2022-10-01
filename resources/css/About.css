@@ -3,15 +3,17 @@
 }
 
 .about img {
+    cursor: pointer;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     max-width: 480px;
     max-height: 700px;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
+
 .about .words p {
 	font-size: calc(1vw + 0.7rem);
 	font-weight: 350;
@@ -19,4 +21,12 @@
 
 .words {
 	margin-top: -20px;
+}
+
+.img-clicked {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }

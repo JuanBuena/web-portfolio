@@ -68,16 +68,16 @@ header nav li:active a {
     background-clip: text;
 }
 
-/* .menu {
+.menu {
 	display: none;
-} */
+}
 
 @media only screen and (max-width: 800px) {
 	:root {
 		--padding-width: 2.5rem;
 	}
 
-	/* .large {
+	.large {
 		display: none;
 	}
 
@@ -96,7 +96,7 @@ header nav li:active a {
 		right: 0;
 		top: 0;
 		min-width: 100%;
-		background-color: #232135;
+		background-color: #000;
 		z-index: 16;
 	}
 
@@ -105,10 +105,11 @@ header nav li:active a {
 		padding: 0;
 	}
 
-	.small ul li {
+	.small ul li a {
+        text-decoration: none;
 		margin-left: 0;
 		width: fit-content;
 		text-align: center;
 		font-size: calc(1vw + 1.6rem);
-	} */
+	}
 }

@@ -5,6 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Buena | Software Engineer</title>
+    <script>
+        window.addEventListener("resize", function() {
+            if (window.matchMedia("(min-width: 800px)").matches
+            && document.getElementById("smallMenu").style.display === "flex") {
+                document.getElementById("smallMenu").style.display = "none";
+            }
+        })
+
+        function myFunction() {
+            document.getElementById("smallMenu").classList.toggle("menu");
+
+            if (document.getElementById("smallMenu").style.display === "none") {
+                document.getElementById("smallMenu").style.display = "flex";
+            }
+            else if (document.getElementById("smallMenu").style.display === "flex") {
+                document.getElementById("smallMenu").style.display = "none";
+            }
+        }
+
+        function redirect() {
+            document.getElementById("menuButton").click();
+        }
+
+        function imgBorder() {
+            document.getElementById("juan").classList.toggle("img-clicked");
+        }
+    </script>
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/App.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/Nav.css" type="text/css" rel="stylesheet">
@@ -22,17 +49,37 @@
                 <h1>
                     <a href="#home">Juan Buena</a>
                 </h1>
-                <ul>
-                    <li>
-                        <a href="#Projectslink">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#About">About</a>
-                    </li>
-                    <li>
-                        <a href="#Contact">Contact</a>
-                    </li>
-                </ul>
+                <div id="menuButton" class="menu" onclick="myFunction()">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path>
+                    </svg>
+                </div>
+                <div id="large" class="large">
+                    <ul>
+                        <li>
+                            <a href="#Projectslink">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#About">About</a>
+                        </li>
+                        <li>
+                            <a href="#Contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="smallMenu" class="small" style="display: none;" onclick="redirect()">
+                    <ul>
+                        <li>
+                            <a href="#Projectslink">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#About">About</a>
+                        </li>
+                        <li>
+                            <a href="#Contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <main>
@@ -93,7 +140,7 @@
             <section id="About" class="light">
                 <div class="about">
                     <h2>Get To Know Me</h2>
-                    <img src="./resources/media/Juan_Buena.jpg" alt="Picture of Juan"/>
+                    <img id="juan" src="./resources/media/Juan_Buena.jpg" alt="Picture of Juan" onclick="imgBorder()"/>
                     <div class="words">
                         <p>Hello, my name is Juan Buena. I am a first-generation graduate from the University of Houston with a Bachelor's degree in Computer Science and a minor in Business.
                             Working as a Software Engineer over the past 3 years, with a strong background in creating corporate applications, providing software technical support, and being able to swiftly adopt new technologies.</p>
