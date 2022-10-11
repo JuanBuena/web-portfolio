@@ -62,9 +62,9 @@ h2 {
 .arrow:hover,
 .arrow:active {
     background: linear-gradient(to right, #014473, #2666fb);
-    /* -webkit-background-clip: content-box;
+    -webkit-background-clip: content-box;
     background-clip: content-box;
-    color: transparent; */
+    color: transparent;
 }
 
 .arrow svg {
