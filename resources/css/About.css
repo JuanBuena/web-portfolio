@@ -19,10 +19,6 @@
 	font-weight: 350;
 }
 
-.words {
-	margin-top: -20px;
-}
-
 .img-clicked {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);

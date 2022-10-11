@@ -5,33 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Buena | Software Engineer</title>
-    <script>
-        window.addEventListener("resize", function() {
-            if (window.matchMedia("(min-width: 800px)").matches
-            && document.getElementById("smallMenu").style.display === "flex") {
-                document.getElementById("smallMenu").style.display = "none";
-            }
-        })
-
-        function myFunction() {
-            document.getElementById("smallMenu").classList.toggle("menu");
-
-            if (document.getElementById("smallMenu").style.display === "none") {
-                document.getElementById("smallMenu").style.display = "flex";
-            }
-            else if (document.getElementById("smallMenu").style.display === "flex") {
-                document.getElementById("smallMenu").style.display = "none";
-            }
-        }
-
-        function redirect() {
-            document.getElementById("menuButton").click();
-        }
-
-        function imgBorder() {
-            document.getElementById("juan").classList.toggle("img-clicked");
-        }
-    </script>
+    <script type="text/javascript" src="./scripts/index.js"></script>
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/App.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/Nav.css" type="text/css" rel="stylesheet">
@@ -43,49 +17,49 @@
     <link href="./resources/css/Skills.css" type="text/css" rel="stylesheet">
 </head>
 <body id="home">
+    <header>
+        <nav>
+            <h1>
+                <a href="#home">Juan Buena</a>
+            </h1>
+            <div id="menuButton" class="menu" onclick="menu()">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path>
+                </svg>
+            </div>
+            <div id="large" class="large">
+                <ul>
+                    <li>
+                        <a href="#Projectslink">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#About">About</a>
+                    </li>
+                    <li>
+                        <a href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="smallMenu" class="small" style="display: none;" onclick="redirect()">
+                <ul style="pointer-events: auto;">
+                    <li>
+                        <a href="#Projectslink">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#About">About</a>
+                    </li>
+                    <li>
+                        <a href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <div class="App">
-        <header>
-            <nav>
-                <h1>
-                    <a href="#home">Juan Buena</a>
-                </h1>
-                <div id="menuButton" class="menu" onclick="myFunction()">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path>
-                    </svg>
-                </div>
-                <div id="large" class="large">
-                    <ul>
-                        <li>
-                            <a href="#Projectslink">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#About">About</a>
-                        </li>
-                        <li>
-                            <a href="#Contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="smallMenu" class="small" style="display: none;" onclick="redirect()">
-                    <ul>
-                        <li>
-                            <a href="#Projectslink">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#About">About</a>
-                        </li>
-                        <li>
-                            <a href="#Contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
         <main>
             <section class="home">
                 <div class="home-text">
-                    <h1>Hi, I'm Juan!</h1>
+                    <h1>Welcome, I'm Juan!</h1>
                     <h2>Software Engineer</h2>
                     <div class="btns">
                         <a class="btn1" href="https://drive.google.com/file/d/1sjf5mQG4mtPZ2gGtUnugK87ra4ryCYZh/view?usp=sharing" target="_blank">View Resumé</a>
@@ -142,11 +116,11 @@
                     <h2>Get To Know Me</h2>
                     <img id="juan" src="./resources/media/Juan_Buena.jpg" alt="Picture of Juan" onclick="imgBorder()"/>
                     <div class="words">
-                        <p>Hello, my name is Juan Buena. I am a first-generation graduate from the University of Houston with a Bachelor's degree in Computer Science and a minor in Business.
+                        <p>Hello, my name is Juan Buena. I am a graduate from the University of Houston with a Bachelor's degree in Computer Science and a minor in Business.
                             Working as a Software Engineer over the past 3 years, with a strong background in creating corporate applications, providing software technical support, and being able to swiftly adopt new technologies.</p>
                         <p>I've had the opportunity to explore many areas of programming, developing a wide array of knowledge related to front-end (JavaScript, HTML/CSS, React), back-end (C++, C#, ASP.NET) & the database (SQL Management Studio, MySQL).
-                            I enjoy exploring the principles, strategies, and tools that help us live happier, healthier, and more productive lives.</p>
-                        <p>Personal Excellence for me starts with crafting solutions, debugging, learning, and serving others. In my personal time, I enjoy working on projects, exercising, and reading.</p>
+                            I enjoy exploring the principles, strategies, and tools that help us live blissful, healthier, and more productive lives.</p>
+                        <p>Personal Excellence for me starts with raising my standards, crafting solutions, learning, and serving others. In my personal time, I enjoy working on projects, exercising, and reading.</p>
                     </div>
                 </div>
             </section>
@@ -283,8 +257,8 @@
                     </div>
                 </div>
             </section>
-            <section class="appreciation">
-                <p class="">&#x2660; Thank you for scrolling ♠️</p>
+            <section class="last-section">
+                <p class="">♠️ Thank you for scrolling ♠️</p>
                 <div class="arrow">
                     <a href="#home">
                         <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1.4em" width="1.4em" xmlns="http://www.w3.org/2000/svg">
@@ -294,6 +268,7 @@
                 </div>
             </section>
         </main>
+    </div>
         <footer>
             <ul>
                 <li>
@@ -321,6 +296,5 @@
                 <small>&copy; 2022 Juan Buena</small>
             </div>
         </footer>
-    </div>
 </body>
 </html>

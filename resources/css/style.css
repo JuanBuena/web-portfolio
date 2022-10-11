@@ -1,7 +1,6 @@
 /* width */
 ::-webkit-scrollbar {
-	width: 5px;
-	height: 3px;
+	width: 7px;
 }
 
 /* Track */
@@ -38,9 +37,4 @@ body {
 	scroll-behavior: smooth;
 	scrollbar-color: #6253e8 #232135;
 	scrollbar-width: thin;
-}
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
 }
